@@ -1,0 +1,10 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=R2
+Comment=IconTest Link
+Exec=/home/pi/work/r2/src/r2_start.sh    
+Icon=/home/pi/work/r2/assets/icon.png
+Terminal=true
+#StartupNotify=true
+Type=Application
+Categories=Application;Development;
