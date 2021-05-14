@@ -2,8 +2,8 @@
 Encoding=UTF-8
 Name=R2
 Comment=IconTest Link
-Exec=/home/pi/work/r2/src/r2_start.sh    
-Icon=/home/pi/work/r2/assets/icon.png
+Exec=/home/pi/Seeed_Python_ReTerminal_Examples/src/r2_start.sh
+Icon=/home/pi/Seeed_Python_ReTerminal_Examples/assets/icon.png
 Terminal=true
 #StartupNotify=true
 Type=Application
