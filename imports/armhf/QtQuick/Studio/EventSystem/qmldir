@@ -1,0 +1,3 @@
+module QtQuick.Studio.EventSystem
+singleton EventSystem 1.0 EventSystem.qml
+EventListener 1.0 EventListener.qml
