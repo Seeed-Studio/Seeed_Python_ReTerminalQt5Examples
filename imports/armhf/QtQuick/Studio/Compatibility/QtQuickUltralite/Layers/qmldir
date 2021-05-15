@@ -1,0 +1,6 @@
+module QtQuickUltralite.Layers
+Application 1.7 Application.qml
+Screen 1.7 Screen.qml
+ImageLayer 1.7 ImageLayer.qml
+ItemLayer 1.7 ItemLayer.qml
+SpriteLayer 1.7 SpriteLayer.qml
