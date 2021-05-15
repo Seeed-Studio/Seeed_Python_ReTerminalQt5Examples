@@ -1,0 +1,6 @@
+module QtQuickUltralite.Extras
+ColorizedImage 1.0 ColorizedImage.qml
+StaticText 1.0 StaticText.qml
+plugin QtQuickUltralitePlugin
+
+ColorizedImage 1.7 ColorizedImage.qml
