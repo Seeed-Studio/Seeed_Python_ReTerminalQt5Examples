@@ -1,6 +1,7 @@
 # This Python file uses the following encoding: utf-8
 import os, logging
 import sys
+import platform
 import PySide2.QtQml
 from PySide2.QtQml import QQmlApplicationEngine
 from PySide2.QtWidgets import *
@@ -51,6 +52,7 @@ if __name__ == '__main__':
     logging.basicConfig(filename=LOG_NAME,level=logging.DEBUG,format=LOG_FORMAT)
     # view = QQuickView()
     engine = QQmlApplicationEngine()
+    engine.addImportPath("../imports/"+platform.machine())
     url = QUrl("../NewbuttonUI.qml")
     # url = QUrl("Ui.ui.qml")
     context = engine.rootContext()
