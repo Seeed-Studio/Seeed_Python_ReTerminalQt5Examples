@@ -1,7 +1,0 @@
-BidirectionalBinding 1.0 BidirectionalBinding.qml
-RangeMapper 1.0 RangeMapper.qml
-MinMaxMapper 1.0 MinMaxMapper.qml
-StringMapper 1.0 StringMapper.qml
-OrOperator 1.0 OrOperator.qml
-AndOperator 1.0 AndOperator.qml
-NotOperator 1.0 NotOperator.qml

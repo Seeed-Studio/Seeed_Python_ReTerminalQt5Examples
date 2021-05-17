@@ -1,2 +1,0 @@
-module QtQuick.Studio.EventSimulator
-singleton EventSimulator 1.0 EventSimulator.qml
