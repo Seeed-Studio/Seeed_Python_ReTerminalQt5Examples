@@ -1,6 +1,6 @@
 [Desktop Entry]
 Encoding=UTF-8
-Name=R2
+Name=ReTerminal
 Comment=IconTest Link
 Exec=/home/pi/Seeed_Python_ReTerminalQt5Examples/src/r2_start.sh
 Icon=/home/pi/Seeed_Python_ReTerminalQt5Examples/assets/icon.png
