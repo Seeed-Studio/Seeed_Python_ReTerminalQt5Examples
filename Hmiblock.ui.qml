@@ -18,6 +18,7 @@ Item {
         y: 247
         width: 373
         height: 143
+        scale: 0.8
         color: "#FFFFFF"
         text: "HMI \nConfiguration"
         font.pixelSize: 60

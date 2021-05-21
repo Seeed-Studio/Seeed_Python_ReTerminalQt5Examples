@@ -14,7 +14,7 @@ Item {
 
     Text {
         id: dashboard
-        x: 91
+        x: 55
         y: 286
         width: 291
         height: 60

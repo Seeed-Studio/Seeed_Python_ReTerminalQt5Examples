@@ -14,7 +14,7 @@ Item {
 
     Text {
         id: seeed_technology
-        x: 326
+        x: 310
         y: 258
         width: 307
         height: 50
@@ -28,7 +28,7 @@ Item {
 
     Text {
         id: reterminal
-        x: 275
+        x: 230
         y: 167
         width: 378
         height: 84
