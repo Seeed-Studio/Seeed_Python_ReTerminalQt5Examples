@@ -10,30 +10,8 @@ Item {
     property alias axisY: axis_y
     property alias axisZ: axis_z
 
-    Image {
-        id: accel_border
-        x: 0
-        y: 0
-        source: "assets/accel_border.png"
-    }
-
-    Text {
-        id: axis_accelerometer
-        x: 43
-        y: 31
-        width: 221
-        height: 26
-        color: "#000000"
-        text: "3-Axis Accelerometer"
-        font.pixelSize: 21
-        horizontalAlignment: Text.AlignLeft
-        font.styleName: "Regular"
-        font.family: "Microsoft YaHei"
-    }
-
     ChartView {
         id: chartview
-        title: "Accelerator 3-Axis"
         anchors.fill: parent
         antialiasing: true
 
@@ -74,6 +52,27 @@ Item {
             axisY: valueAxisY
             
         }
+    }
+    
+    Image {
+        id: accel_border
+        x: 0
+        y: 0
+        source: "assets/accel_border.png"
+    }
+
+    Text {
+        id: axis_accelerometer
+        x: 43
+        y: 31
+        width: 221
+        height: 26
+        color: "#000000"
+        text: "3-Axis Accelerometer"
+        font.pixelSize: 21
+        horizontalAlignment: Text.AlignLeft
+        font.styleName: "Regular"
+        font.family: "Microsoft YaHei"
     }
 }
 

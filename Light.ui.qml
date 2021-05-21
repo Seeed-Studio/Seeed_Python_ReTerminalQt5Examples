@@ -8,30 +8,8 @@ Item {
 
     property alias lightaxisX: light_x
 
-    Image {
-        id: light_border
-        x: 0
-        y: 0
-        source: "assets/light_border.png"
-    }
-
-    Text {
-        id: light_sensor
-        x: 45
-        y: 38
-        width: 104
-        height: 25
-        color: "#000000"
-        text: "Light Sensor"
-        font.pixelSize: 21
-        horizontalAlignment: Text.AlignLeft
-        font.styleName: "Regular"
-        font.family: "Microsoft YaHei"
-    }
-
     ChartView {
         id: chartview
-        title: "Light Sensor"
         anchors.fill: parent
         antialiasing: true
 
@@ -53,12 +31,32 @@ Item {
 
         SplineSeries {
             id:light_x
-            name: "x"
+            name: "Light Intensity (Lux)"
             axisX: lightAxisX
             axisY: lightAxisY
         }  
     }
 
+    Image {
+        id: light_border
+        x: 0
+        y: 0
+        source: "assets/light_border.png"
+    }
+
+    Text {
+        id: light_sensor
+        x: 45
+        y: 38
+        width: 104
+        height: 25
+        color: "#000000"
+        text: "Light Sensor"
+        font.pixelSize: 21
+        horizontalAlignment: Text.AlignLeft
+        font.styleName: "Regular"
+        font.family: "Microsoft YaHei"
+    }
 }
 
 /*##^##
