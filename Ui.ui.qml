@@ -51,7 +51,7 @@ Item {
         cpuframe: Data.Values.cpu
     }
 
-    Ui_navigate_1 {
+    Page2_navigation_bar {
         id: ui_navigate_1
         x: -26
         y: -178
