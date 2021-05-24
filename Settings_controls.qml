@@ -256,6 +256,7 @@ Item {
                 flat: false
                 scale: 1.1
                 font.pointSize: 28
+                font.family: "Source Sans Pro"
                 checkable: true
                 checked: false
                 palette {
@@ -278,6 +279,7 @@ Item {
                 text: qsTr("REBOOT")
                 scale: 1.1
                 font.pointSize: 28
+                font.family: "Source Sans Pro"
                 checked: false
                 checkable: true
                 palette {
@@ -300,6 +302,7 @@ Item {
                 text: qsTr("EXIT")
                 scale: 1.1
                 font.pointSize: 28
+                font.family: "Source Sans Pro"
                 checked: false
                 checkable: true
                 palette {
