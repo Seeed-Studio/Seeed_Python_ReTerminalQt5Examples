@@ -55,7 +55,7 @@ Item {
         scale: 0.67
     }
 
-    Touch_panel12 {
+    System_info_block {
         id: touch_panel12
         x: 666
         y: -139
