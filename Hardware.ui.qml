@@ -72,7 +72,7 @@ Item {
         interval: 100
     }
 
-    Touch_panel_123 {
+    Touch_panel {
         id: touch_panel_123
         x: 566
         y: 295
