@@ -48,7 +48,7 @@ Item {
         scale: 0.67
     }
 
-    Database {
+    HMI_database_block {
         id: database
         x: 505
         y: 434
