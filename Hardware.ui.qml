@@ -43,7 +43,7 @@ Item {
         interval: 100
     }
 
-    Accel1 {
+    Accelerometer {
         id: accel1
         x: -5
         y: 295
