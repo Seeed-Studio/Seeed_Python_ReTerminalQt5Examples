@@ -114,7 +114,7 @@ Item {
         f1_buttonVisible: Data.Values.f1Visible
     }
 
-    Ui_navigate_4 {
+    Page3_navigation_bar {
         id: ui_navigate_4
         x: -26
         y: -178
