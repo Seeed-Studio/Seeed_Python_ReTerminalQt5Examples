@@ -16,7 +16,7 @@ Item {
         source: "assets/settings.png"
     }
 
-    Ui_navigate_2 {
+    Page5_navigation_bar {
         id: ui_navigate_2
         x: -26
         y: -178
