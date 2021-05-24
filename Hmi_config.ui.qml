@@ -58,7 +58,7 @@ Item {
         scale: 0.67
     }
 
-    Cloud {
+    HMI_cloud_block {
         id: cloud
         x: 753
         y: 435
