@@ -41,7 +41,7 @@ Item {
                 text: "dasdad"
                 checked: false
                 checkable: true
-                scale: 3.5
+                scale: 3
 
                 onClicked:
                 {
@@ -66,7 +66,7 @@ Item {
                 text: "dasdad"
                 checked: false
                 checkable: true
-                scale: 3.5
+                scale: 3
 
                 onClicked:
                 {
@@ -91,7 +91,7 @@ Item {
                 text: "dasdad"
                 checked: false
                 checkable: true
-                scale: 3.5
+                scale: 3
 
                 onClicked:
                 {
@@ -116,7 +116,7 @@ Item {
                 text: "dasdad"
                 checked: false
                 checkable: true
-                scale: 3.5
+                scale: 3
 
                 onClicked:
                 {
@@ -141,7 +141,7 @@ Item {
                 text: "dasdad"
                 checked: false
                 checkable: true
-                scale: 3.5
+                scale: 3
 
                 onClicked:
                 {
@@ -166,7 +166,7 @@ Item {
                 text: "dasdad"
                 checked: false
                 checkable: true
-                scale: 3.5
+                scale: 3
 
                 onClicked:
                 {
@@ -185,63 +185,63 @@ Item {
             Text {
                 id: text1
                 x: 381
-                y: 104
+                y: 112
                 text: qsTr("Camera:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
             Text {
                 id: text2
                 x: 1131
-                y: 104
+                y: 112
                 text: qsTr("SSH:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
             Text {
                 id: text3
                 x: 381
-                y: 282
+                y: 290
                 text: qsTr("VNC:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
             Text {
                 id: text4
                 x: 1131
-                y: 282
+                y: 290
                 text: qsTr("SPI:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
             Text {
                 id: text5
                 x: 381
-                y: 460
+                y: 468
                 text: qsTr("I2C:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
             Text {
                 id: text6
                 x: 1131
-                y: 460
+                y: 468
                 text: qsTr("Serial:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
             Text {
                 id: text7
                 x: 381
-                y: 648
+                y: 656
                 text: qsTr("LCD Backlight:")
-                font.pixelSize: 65
+                font.pixelSize: 60
                 font.family: "Source Sans Pro"
             }
 
