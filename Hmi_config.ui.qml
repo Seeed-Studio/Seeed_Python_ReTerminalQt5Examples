@@ -28,7 +28,7 @@ Item {
         }
     }
 
-    Ui_navigate_3 {
+    Page4_navigation_bar {
         id: ui_navigate_3
         x: -26
         y: -178
