@@ -15,10 +15,6 @@ QtObject {
     property bool i2cbutton: false
     property bool serialbutton: true
     property int brightness: 150
-    property bool shutdownbutton: true
-    property bool rebootbutton: false
-    property bool logoutbutton: true
-
 
     // CM4 Name
     property string displayCM4name: "0"

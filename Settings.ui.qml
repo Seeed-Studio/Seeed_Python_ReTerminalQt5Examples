@@ -30,9 +30,6 @@ Item {
         x: -317
         y: -178
         scale: 0.67
-        buttonChecked: Data.Values.logoutbutton
-        button2Checked: Data.Values.rebootbutton
-        button1Checked: Data.Values.shutdownbutton
         sliderValue: Data.Values.brightness
         switch6Checked: Data.Values.serialbutton
         switch5Checked: Data.Values.i2cbutton
