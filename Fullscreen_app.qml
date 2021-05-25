@@ -9,7 +9,7 @@ ApplicationWindow {
     visible: true
     visibility: "FullScreen"
 
-    property var iniITEM: "Home.ui.qml"
+    property var iniITEM: "Page1_Home.ui.qml"
 
     StackView {
         id: stackview
@@ -54,7 +54,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Home.ui.qml",StackView.Immediate,true)
+            stackview.push("Page1_Home.ui.qml",StackView.Immediate,true)
         }
     }
 
@@ -67,7 +67,7 @@ ApplicationWindow {
             opacity: 0
             scale: 0.76
             onClicked: {
-                stackview.push("Ui.ui.qml",StackView.Immediate,true)
+                stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate,true)
             }
         }
 
@@ -81,7 +81,7 @@ ApplicationWindow {
             opacity: 0
             scale: 0.76
             onClicked: {
-                stackview.push("Hmi_config.ui.qml",StackView.Immediate,true)
+                stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate,true)
             }
         }
 
@@ -94,7 +94,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Ui.ui.qml",StackView.Immediate,true)
+            stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate,true)
         }
     }
 
@@ -107,7 +107,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Hardware.ui.qml",StackView.Immediate,true)
+            stackview.push("Page3_HW_Monitor.ui.qml",StackView.Immediate,true)
         }
     }
 
@@ -120,7 +120,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Hmi_config.ui.qml",StackView.Immediate,true)
+            stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate,true)
         }
     }
 
@@ -133,7 +133,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Settings.ui.qml",StackView.Immediate,true)
+            stackview.push("Page5_Settings.ui.qml",StackView.Immediate,true)
         }
     }
 
