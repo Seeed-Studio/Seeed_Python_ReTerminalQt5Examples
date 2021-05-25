@@ -101,7 +101,7 @@ Item {
         scale: 0.67
     }
 
-    Leds_v2 {
+    LEDs_Buttons {
         id: leds_v2
         x: 566
         y: -50
