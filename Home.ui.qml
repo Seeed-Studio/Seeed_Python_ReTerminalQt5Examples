@@ -46,7 +46,7 @@ Item {
         scale: 0.67
     }
 
-    Home_navigate {
+    Page1_navigation_bar {
         id: home_navigate
         x: -26
         y: -178
