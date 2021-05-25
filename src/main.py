@@ -53,7 +53,7 @@ if __name__ == '__main__':
     # view = QQuickView()
     engine = QQmlApplicationEngine()
     engine.addImportPath("../imports/"+platform.machine())
-    url = QUrl("../NewbuttonUI.qml")
+    url = QUrl("../Fullscreen_app.qml")
     # url = QUrl("Ui.ui.qml")
     context = engine.rootContext()
 
