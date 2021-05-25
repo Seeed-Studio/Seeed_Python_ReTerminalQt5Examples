@@ -78,7 +78,7 @@ Item {
         scale: 0.67
     }
 
-    Sensor_2 {
+    HMI_sensor_block_2 {
         id: sensor_2
         x: 1127
         y: 133
@@ -88,7 +88,7 @@ Item {
         scale: 0.67
     }
 
-    Sensor_1 {
+    HMI_sensor_block_1 {
         id: sensor_1
         x: 880
         y: 122
@@ -98,7 +98,7 @@ Item {
         scale: 0.67
     }
 
-    Robot_3 {
+    HMI_robot_block_3 {
         id: robot_3
         x: 651
         y: 116
@@ -108,7 +108,7 @@ Item {
         scale: 0.67
     }
 
-    Robot_2 {
+    HMI_robot_block_2 {
         id: robot_2
         x: 412
         y: 116
@@ -118,7 +118,7 @@ Item {
         scale: 0.67
     }
 
-    Robot_1 {
+    HMI_robot_block_1 {
         id: robot_1
         x: 171
         y: 116
