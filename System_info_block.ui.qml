@@ -193,7 +193,7 @@ Item {
         width: 393
         height: 38
         color: "#000000"
-        text: "Wio Terminal Build-Code"
+        text: "reTerminal Build Code"
         font.pixelSize: 32
         horizontalAlignment: Text.AlignLeft
         font.family: "Source Sans Pro"
