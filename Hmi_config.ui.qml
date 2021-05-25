@@ -68,7 +68,7 @@ Item {
         scale: 0.67
     }
 
-    Reterm_1 {
+    HMI_reTerminal_block_2 {
         id: reterm_1
         x: 1094
         y: 434
