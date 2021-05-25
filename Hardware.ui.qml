@@ -18,7 +18,7 @@ Item {
         source: "assets/hardware.png"
     }
 
-    Light {
+    Light_sensor {
         id: light
         x: -5
         y: -50
