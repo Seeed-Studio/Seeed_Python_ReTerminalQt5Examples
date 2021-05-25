@@ -4,6 +4,7 @@ import subprocess
 from PySide2.QtCore import *
 
 cm4 = subprocess.getoutput("cat /proc/cpuinfo | grep 'Revision' | awk '{print $1,$2,$3}'")
+build = subprocess.getoutput('cat /proc/device-tree/hardware')
 rpios = subprocess.getoutput('lsb_release -ds')
 linux = subprocess.getoutput('uname -r')
 eth = os.popen('ip addr show eth0 | grep "\<inet\>" | awk \'{ print $2 }\' | awk -F "/" \'{ print $1 }\'').read().strip()
@@ -26,7 +27,7 @@ class Systeminfo(QThread):
     
     def run(self):
         Compute = cm4
-        Retermial = "V1.2"
+        Retermial = build
         Version = rpios
         Kernel = linux
         Ethernet = eth
