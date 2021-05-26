@@ -1,6 +1,8 @@
 # Seeed_Python_ReTerminal_Examples
 Python Examples for Seeed ReTerminal
 
+<p style="text-align:center;"><img src="https://files.seeedstudio.com/wiki/ReTerminal/Qt-Demo.gif" alt="pir" width="1000" height="auto"></p>
+
 For debian or ubuntu system ,you need install following packages.
 ```shell
 sudo apt install  qml-module-qtquick-shapes python3-pyside2.qtqml python3-pyside2.qtcore python3-pyside2.qtnetwork python3-pyside2.qtgui python3-pyside2.qtwidgets python3-pyside2.qtquick qtquickcontrols2-5-dev qml-module-qtcharts qml-module-qtquick-controls  qml-module-qtquick-controls2
