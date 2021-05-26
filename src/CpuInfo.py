@@ -1,6 +1,8 @@
 import sys
 import os
 from PySide2.QtCore import *
+import psutil
+
 class CpuUsage(QThread):
     CpuSignal = Signal(int)
     def __init__(self):
@@ -8,9 +10,9 @@ class CpuUsage(QThread):
     
     def run(self):
         while True:
-            p = os.popen("top -n1 | awk '/Cpu\(s\):/ {print $2}'").readline().strip("\n")
+            # p = os.popen("top -n1 | awk '/Cpu\(s\):/ {print $2}'").readline().strip("\n")
+            p = psutil.cpu_percent(4)
             cpu_used = int(float(p))
-            # print("CpuUsage",cpu_used)
             self.CpuSignal.emit(int(cpu_used))
             self.sleep(1)
 
