@@ -247,9 +247,9 @@ Item {
 
             Button {
                 id: button
-                x: 268
+                x: 368
                 y: 866
-                width: 453
+                width: 350
                 height: 91
                 text: qsTr("SHUTDOWN")
                 autoExclusive: false
@@ -274,7 +274,7 @@ Item {
                 id: button1
                 x: 824
                 y: 866
-                width: 453
+                width: 350
                 height: 91
                 text: qsTr("REBOOT")
                 scale: 1.1
@@ -295,9 +295,9 @@ Item {
 
             Button {
                 id: button2
-                x: 1379
+                x: 1279
                 y: 866
-                width: 453
+                width: 350
                 height: 91
                 text: qsTr("EXIT")
                 scale: 1.1
