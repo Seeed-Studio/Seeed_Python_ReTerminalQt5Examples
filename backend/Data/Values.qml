@@ -8,13 +8,13 @@ QtObject {
     id: values
 
     // settings
-    property bool cambutton: true
-    property bool sshbutton: false
-    property bool vncbutton: true
-    property bool spibutton: true
-    property bool i2cbutton: false
-    property bool serialbutton: true
-    property int brightness: 150
+    // property bool cambutton: true
+    // property bool sshbutton: false
+    // property bool vncbutton: true
+    // property bool spibutton: true
+    // property bool i2cbutton: false
+    // property bool serialbutton: true
+    // property int brightness: 200
 
     // CM4 Name
     property string displayCM4name: "0"
@@ -37,7 +37,6 @@ QtObject {
     // cpu dial values
     property int cpu: 0
     property string displaycpu: "0"
-
 
     Component.onCompleted: {
         // 绑定python中的信号到qml中的函数

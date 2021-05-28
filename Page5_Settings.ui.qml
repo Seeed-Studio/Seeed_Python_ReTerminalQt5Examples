@@ -30,13 +30,6 @@ Item {
         x: -317
         y: -178
         scale: 0.67
-        sliderValue: Data.Values.brightness
-        switch6Checked: Data.Values.serialbutton
-        switch5Checked: Data.Values.i2cbutton
-        switch4Checked: Data.Values.spibutton
-        switch3Checked: Data.Values.vncbutton
-        switch2Checked: Data.Values.sshbutton
-        switch1Checked: Data.Values.cambutton
     }
 }
 
