@@ -15,34 +15,8 @@ ApplicationWindow {
         id: stackview
         width: 1280
         height: 720
-        // transform: Rotation {
-        //     origin.x: 600; origin.y:500; angle: 90
-        // }
-        pushEnter: Transition {
-                  PropertyAnimation{
-                      property: "opacity"
-                      from: 0
-                      to: 1
-                      duration: 1/100
-                  }
-              }
-
-        pushExit: Transition {
-                  PropertyAnimation{
-                      property: "opacity"
-                      from: 1
-                      to: 0
-                      duration: 1/100
-                  }
-        }
 
         initialItem: iniITEM
-
-        // Hardware {
-        //     id: hardware
-        //     x: 0
-        //     y: 0
-        // }
     }
 
     Button {
@@ -54,7 +28,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Page1_Home.ui.qml",StackView.Immediate,true)
+            stackview.push("Page1_Home.ui.qml",StackView.Immediate)
         }
     }
 
@@ -67,7 +41,7 @@ ApplicationWindow {
             opacity: 0
             scale: 0.76
             onClicked: {
-                stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate,true)
+                stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
             }
         }
 
@@ -81,7 +55,7 @@ ApplicationWindow {
             opacity: 0
             scale: 0.76
             onClicked: {
-                stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate,true)
+                stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
             }
         }
 
@@ -94,7 +68,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate,true)
+            stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
         }
     }
 
@@ -107,7 +81,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Page3_HW_Monitor.ui.qml",StackView.Immediate,true)
+            stackview.push("Page3_HW_Monitor.ui.qml",StackView.Immediate)
         }
     }
 
@@ -120,7 +94,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate,true)
+            stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
         }
     }
 
@@ -133,32 +107,9 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
-            stackview.push("Page5_Settings.ui.qml",StackView.Immediate,true)
+            stackview.push("Page5_Settings.ui.qml",StackView.Immediate)
         }
     }
-
-    // Button {
-    //     id: closebutton
-    //     x: 1200
-    //     y: 0
-    //     width: 80
-    //     height: 31
-    //     palette {
-    //         button: "red"
-    //         buttonText: "white"
-    //     }
-    //     opacity: 100
-    //     text: "X"
-    //     anchors.right: parent.right
-    //     anchors.top: parent.top
-    //     autoRepeat: false
-    //     flat: false
-    //     font.family: "Verdana"
-    //     onClicked: {
-    //         application.close()
-    //         }
-    // }
-
 }
 
 /*##^##
