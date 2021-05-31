@@ -29,35 +29,41 @@ ApplicationWindow {
         scale: 0.76
         onClicked: {
             stackview.push("Page1_Home.ui.qml",StackView.Immediate)
+            button5.enabled = true
+            button6.enabled = true
         }
     }
 
     Button {
-            id: button5
-            x: 135
-            y: 454
-            width: 362
-            height: 360
-            opacity: 0
-            scale: 0.76
-            onClicked: {
-                stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
-            }
-        }
+        id: button5
+        x: 135
+        y: 454
+        width: 362
+        height: 360
+        opacity: 0
+        scale: 0.76
+        onClicked: {
+            stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
+            button5.enabled = false
+            button6.enabled = false
 
-    
-    Button {
-            id: button6
-            x: 566
-            y: 454
-            width: 362
-            height: 360
-            opacity: 0
-            scale: 0.76
-            onClicked: {
-                stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
-            }
         }
+    }
+
+    Button {
+        id: button6
+        x: 566
+        y: 454
+        width: 362
+        height: 360
+        opacity: 0
+        scale: 0.76
+        onClicked: {
+            stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
+            button5.enabled = false
+            button6.enabled = false
+        }
+    }
 
     Button {
         id: button1
@@ -69,6 +75,8 @@ ApplicationWindow {
         scale: 0.76
         onClicked: {
             stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
+            button5.enabled = false
+            button6.enabled = false
         }
     }
 
@@ -82,6 +90,8 @@ ApplicationWindow {
         scale: 0.76
         onClicked: {
             stackview.push("Page3_HW_Monitor.ui.qml",StackView.Immediate)
+            button5.enabled = false
+            button6.enabled = false
         }
     }
 
@@ -95,6 +105,8 @@ ApplicationWindow {
         scale: 0.76
         onClicked: {
             stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
+            button5.enabled = false
+            button6.enabled = false
         }
     }
 
@@ -108,6 +120,8 @@ ApplicationWindow {
         scale: 0.76
         onClicked: {
             stackview.push("Page5_Settings.ui.qml",StackView.Immediate)
+            button5.enabled = false
+            button6.enabled = false
         }
     }
 }
