@@ -33,7 +33,7 @@ Item {
         width: 378
         height: 84
         color: "#FFFFFF"
-        text: "ReTerminal"
+        text: "reTerminal"
         font.pixelSize: 80
         horizontalAlignment: Text.AlignLeft
         font.styleName: "Bold"

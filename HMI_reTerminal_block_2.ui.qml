@@ -19,7 +19,7 @@ Item {
         width: 91
         height: 21
         color: "#000000"
-        text: "ReTerminal"
+        text: "reTerminal"
         font.pixelSize: 20
         horizontalAlignment: Text.AlignLeft
         font.styleName: "Regular"
