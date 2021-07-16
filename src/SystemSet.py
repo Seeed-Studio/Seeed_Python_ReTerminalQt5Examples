@@ -1,6 +1,15 @@
 import sys,logging
 import os
-from PySide2.QtCore import *
+
+try:
+        from PySide2.QtCore import *
+except ImportError:
+        from PyQt5.QtCore import *
+if 'PyQt5' in sys.modules:
+        from PyQt5.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
+else:
+        from PySide2.QtCore import Signal, Slot
+
 
 Lcdlightpath = '/sys/class/backlight/1-0045/brightness'
 SSHonPath = '/lib/systemd/system/ssh.service'

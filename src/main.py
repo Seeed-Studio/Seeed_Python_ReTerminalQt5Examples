@@ -2,11 +2,23 @@
 import os, logging
 import sys
 import platform
-import PySide2.QtQml
-from PySide2.QtQml import QQmlApplicationEngine
-from PySide2.QtWidgets import *
-from PySide2.QtQuick import *
-from PySide2.QtCore import *
+
+try:
+	import PySide2.QtQml
+except ImportError:
+	import PyQt5.QtQml
+
+if 'PyQt5' in sys.modules:
+	from PyQt5.QtQml import QQmlApplicationEngine
+	from PyQt5.QtWidgets import *
+	from PyQt5.QtCore import *
+	print("this app use pyqt5")
+else:
+	from PySide2.QtQml import QQmlApplicationEngine
+	from PySide2.QtWidgets import *
+	from PySide2.QtQuick import *
+	from PySide2.QtCore import *
+	print("this app use pyside2")
 
 from CpuInfo import CpuUsage, Cputemperature
 from RamUsage import RamUsage
@@ -53,7 +65,10 @@ if __name__ == '__main__':
     # view = QQuickView()
     engine = QQmlApplicationEngine()
     engine.addImportPath("../imports/"+platform.machine())
-    url = QUrl("../Fullscreen_app.qml")
+    if 'buildroot' in platform.uname():
+    	url = QUrl("../Fullscreen_app_for_buildroot.qml")
+    else:
+    	url = QUrl("../Fullscreen_app.qml")
     # url = QUrl("Ui.ui.qml")
     context = engine.rootContext()
 

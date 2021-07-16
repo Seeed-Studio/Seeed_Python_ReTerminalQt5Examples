@@ -1,7 +1,16 @@
 import sys
 import os
 import subprocess
-from PySide2.QtCore import *
+
+try:
+        from PySide2.QtCore import *
+except ImportError:
+        from PyQt5.QtCore import *
+if 'PyQt5' in sys.modules:
+        from PyQt5.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
+else:
+        from PySide2.QtCore import Signal, Slot
+
 
 cm4 = subprocess.getoutput("cat /proc/cpuinfo | grep 'Revision' | awk '{print $1,$2,$3}'")
 build = subprocess.getoutput('cat /proc/device-tree/hardware')

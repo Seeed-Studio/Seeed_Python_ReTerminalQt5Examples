@@ -1,6 +1,16 @@
 import sys
 import os
-from PySide2.QtCore import *
+
+try:
+	from PySide2.QtCore import *
+except ImportError:
+	from PyQt5.QtCore import *
+
+if 'PyQt5' in sys.modules:
+	from PyQt5.QtCore import pyqtSignal as Signal, pyqtSlot as Slot
+else:
+	from PySide2.QtCore import Signal, Slot
+
 import psutil
 
 class CpuUsage(QThread):
