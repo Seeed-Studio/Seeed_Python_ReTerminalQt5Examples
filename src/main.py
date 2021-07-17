@@ -64,10 +64,11 @@ if __name__ == '__main__':
     logging.basicConfig(filename=LOG_NAME,level=logging.DEBUG,format=LOG_FORMAT)
     # view = QQuickView()
     engine = QQmlApplicationEngine()
-    engine.addImportPath("../imports/"+platform.machine())
     if 'buildroot' in platform.uname():
+    	engine.addImportPath("/usr/qml")
     	url = QUrl("../Fullscreen_app_for_buildroot.qml")
     else:
+    	engine.addImportPath("../imports/"+platform.machine())
     	url = QUrl("../Fullscreen_app.qml")
     # url = QUrl("Ui.ui.qml")
     context = engine.rootContext()
