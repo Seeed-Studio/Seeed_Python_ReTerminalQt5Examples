@@ -1,5 +1,6 @@
 import sys,logging
 import os
+import platform
 
 try:
         from PySide2.QtCore import *
@@ -80,15 +81,25 @@ class Settting(QObject):
     #VNC
     @Slot()
     def VNCon(self):
-        os.system('sudo systemctl start vncserver-x11-serviced.service')
+        if 'buildroot' in platform.uname(): 
+            print("buildroot not support vnc yet")
+        else:
+            os.system('sudo systemctl start vncserver-x11-serviced.service')
         logging.info("VNC ON")
     @Slot()
     def VNCoff(self):
-        os.system('sudo systemctl stop vncserver-x11-serviced.service')
+        if 'buildroot' in platform.uname(): 
+            print("buildroot not support vnc yet")
+        else:
+            os.system('sudo systemctl stop vncserver-x11-serviced.service')
         logging.info("VNC ON")
     @Slot(result=bool)
     def getVNC(self):
-        vnc = os.popen('sudo systemctl status vncserver-x11-serviced.service | grep "active" | awk \'{print $2}\'').read().strip("\n")
+        if 'buildroot' in platform.uname(): 
+            vnc="inactive"
+            print("buildroot not support vnc yet")
+        else:
+            vnc = os.popen('sudo systemctl status vncserver-x11-serviced.service | grep "active" | awk \'{print $2}\'').read().strip("\n")
         if (vnc == "active"):
             return True
         elif (vnc == "inactive"):
