@@ -34,6 +34,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page1_Home.ui.qml",StackView.Immediate)
             button5.enabled = true
             button6.enabled = true
@@ -49,6 +50,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
             button5.enabled = false
             button6.enabled = false
@@ -65,6 +67,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
             button5.enabled = false
             button6.enabled = false
@@ -80,6 +83,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page2_Dashboard.ui.qml",StackView.Immediate)
             button5.enabled = false
             button6.enabled = false
@@ -95,6 +99,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page3_HW_Monitor.ui.qml",StackView.Immediate)
             button5.enabled = false
             button6.enabled = false
@@ -110,6 +115,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page4_HMI_Config.ui.qml",StackView.Immediate)
             button5.enabled = false
             button6.enabled = false
@@ -125,6 +131,7 @@ ApplicationWindow {
         opacity: 0
         scale: 0.76
         onClicked: {
+            stackview.pop()
             stackview.push("Page5_Settings.ui.qml",StackView.Immediate)
             button5.enabled = false
             button6.enabled = false
