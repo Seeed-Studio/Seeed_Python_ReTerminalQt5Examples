@@ -34,7 +34,7 @@ class TouchPanel(QThread):
                 if event.type == ecodes.EV_ABS:
                     touchevents = repr(event)
                     val_list = touchevents.replace('(','').replace(')','').replace(' ','').split(',')
-                    print(val_list)
+                    #print(val_list)
                     if val_list[3] == '53':
                             xvalue = int(val_list[4])
                             self.TouchSignal.emit(xvalue,'axisx1')
