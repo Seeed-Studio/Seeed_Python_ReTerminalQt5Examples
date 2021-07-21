@@ -23,7 +23,7 @@ class Settting(QObject):
     @Slot(int)
     def Lcdlightset(self,val):
         if os.path.isfile(Lcdlightpath):
-            os.system('sudo chown pi:pi '+ Lcdlightpath)
+            os.system('chown pi:pi '+ Lcdlightpath)
             values = '%d'%val
             x = 'echo ' + values + ' > ' + Lcdlightpath
             os.system(x)
@@ -39,13 +39,13 @@ class Settting(QObject):
     @Slot()
     def Cameraon(self):
         self.Cameraoff()
-        os.system("sudo sed -i '$a start_x=1' /boot/config.txt")
-        os.system("sudo sed -i '$a gpu_mem=128' /boot/config.txt")
+        os.system("sed -i '$a start_x=1' /boot/config.txt")
+        os.system("sed -i '$a gpu_mem=128' /boot/config.txt")
         logging.info("Cameraon on")
     @Slot()
     def Cameraoff(self):
-        os.system('sudo sed -i "/start_x=/d" /boot/config.txt')
-        os.system('sudo sed -i "/gpu_mem=/d" /boot/config.txt')
+        os.system('sed -i "/start_x=/d" /boot/config.txt')
+        os.system('sed -i "/gpu_mem=/d" /boot/config.txt')
         logging.info("Cameraon off")
 
     @Slot(result=bool)
@@ -60,14 +60,14 @@ class Settting(QObject):
     @Slot()
     def SSHon(self):
         if os.path.isfile(SSHonPath):
-            os.system('sudo ln -s ' + SSHonPath + ' ' + SSHoffPath)
+            os.system('ln -s ' + SSHonPath + ' ' + SSHoffPath)
             logging.info("SSH ON")
         else:
             logging.error("Please set the correct SSH ON path")
     @Slot()
     def SSHoff(self):
         if os.path.isfile(SSHonPath):
-            os.system('sudo rm ' + SSHoffPath)
+            os.system('rm ' + SSHoffPath)
             logging.info("SSH OFF")
         else:
             logging.error("Please set the correct SSH OFF path")
@@ -84,14 +84,14 @@ class Settting(QObject):
         if 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
         else:
-            os.system('sudo systemctl start vncserver-x11-serviced.service')
+            os.system('systemctl start vncserver-x11-serviced.service')
         logging.info("VNC ON")
     @Slot()
     def VNCoff(self):
         if 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
         else:
-            os.system('sudo systemctl stop vncserver-x11-serviced.service')
+            os.system('systemctl stop vncserver-x11-serviced.service')
         logging.info("VNC ON")
     @Slot(result=bool)
     def getVNC(self):
@@ -99,7 +99,7 @@ class Settting(QObject):
             vnc="inactive"
             print("buildroot not support vnc yet")
         else:
-            vnc = os.popen('sudo systemctl status vncserver-x11-serviced.service | grep "active" | awk \'{print $2}\'').read().strip("\n")
+            vnc = os.popen('systemctl status vncserver-x11-serviced.service | grep "active" | awk \'{print $2}\'').read().strip("\n")
         if (vnc == "active"):
             return True
         elif (vnc == "inactive"):
@@ -109,11 +109,11 @@ class Settting(QObject):
     @Slot()
     def SPIon(self):
         self.SPIoff()
-        os.system("sudo sed -i '$a dtparam=spi=on' /boot/config.txt")
+        os.system("sed -i '$a dtparam=spi=on' /boot/config.txt")
         logging.info("SPI ON")
     @Slot()
     def SPIoff(self):
-        os.system('sudo sed -i "/dtparam=spi=/d" /boot/config.txt')
+        os.system('sed -i "/dtparam=spi=/d" /boot/config.txt')
         logging.info("SPI OFF")
     @Slot(result=bool)
     def getSPI(self):
@@ -126,11 +126,11 @@ class Settting(QObject):
     #I2C
     @Slot()
     def I2Con(self):
-        os.system('sudo sed -i "s/.*dtparam=i2c_arm=.*$/dtparam=i2c_arm=on/g" /boot/config.txt')
+        os.system('sed -i "s/.*dtparam=i2c_arm=.*$/dtparam=i2c_arm=on/g" /boot/config.txt')
         logging.info("I2C ON")
     @Slot()
     def I2Coff(self):
-        os.system('sudo sed -i "s/.*dtparam=i2c_arm=.*$/#dtparam=i2c_arm=on/g" /boot/config.txt')
+        os.system('sed -i "s/.*dtparam=i2c_arm=.*$/#dtparam=i2c_arm=on/g" /boot/config.txt')
         logging.info("I2C OFF")
     @Slot(result=bool)
     def getI2C(self):
@@ -144,11 +144,11 @@ class Settting(QObject):
     @Slot()
     def Serialon(self):
         self.Serialoff()
-        os.system("sudo sed -i '$a enable_uart=1' /boot/config.txt")
+        os.system("sed -i '$a enable_uart=1' /boot/config.txt")
         logging.info("Serial ON")
     @Slot()
     def Serialoff(self):
-        os.system('sudo sed -i "/enable_uart=/d" /boot/config.txt')
+        os.system('sed -i "/enable_uart=/d" /boot/config.txt')
         logging.info("Serial OFF")
     @Slot(result=bool)
     def getSER(self):
@@ -161,13 +161,13 @@ class Settting(QObject):
     #Shutdown
     @Slot()
     def Shutdown(self):
-        os.system('sudo shutdown now')
+        os.system('shutdown now')
         logging.info("R2 System Shutdown")
 
     #Reboot
     @Slot()
     def Rebooton(self):
-        os.system('sudo reboot')
+        os.system('reboot')
         logging.info("R2 System Reboot")
 
     #Logout
