@@ -64,7 +64,10 @@ if __name__ == '__main__':
     logging.basicConfig(filename=LOG_NAME,level=logging.DEBUG,format=LOG_FORMAT)
     # view = QQuickView()
     engine = QQmlApplicationEngine()
-    if 'buildroot' in platform.uname():
+    if 'raspberrypi4-64' in platform.uname():
+        engine.addImportPath("/usr/lib/qml")
+        url = QUrl("../Fullscreen_app_for_buildroot.qml")
+    elif 'buildroot' in platform.uname():
     	engine.addImportPath("/usr/qml")
     	url = QUrl("../Fullscreen_app_for_buildroot.qml")
     else:
