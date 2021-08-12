@@ -81,21 +81,28 @@ class Settting(QObject):
     #VNC
     @Slot()
     def VNCon(self):
-        if 'buildroot' in platform.uname(): 
+        if 'raspberrypi4-64' in platform.uname(): 
+            print("yocto not support vnc yet")
+        elif 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
         else:
             os.system('systemctl start vncserver-x11-serviced.service')
         logging.info("VNC ON")
     @Slot()
     def VNCoff(self):
-        if 'buildroot' in platform.uname(): 
+        if 'raspberrypi4-64' in platform.uname(): 
+            print("yocto not support vnc yet")
+        elif 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
         else:
             os.system('systemctl stop vncserver-x11-serviced.service')
         logging.info("VNC ON")
     @Slot(result=bool)
     def getVNC(self):
-        if 'buildroot' in platform.uname(): 
+        if 'raspberrypi4-64' in platform.uname(): 
+            vnc="inactive"
+            print("yocto not support vnc yet")
+        elif 'buildroot' in platform.uname(): 
             vnc="inactive"
             print("buildroot not support vnc yet")
         else:
