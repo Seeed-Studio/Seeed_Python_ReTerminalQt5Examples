@@ -33,10 +33,10 @@ Item {
     }
 
     Image {
-        id: kernallogo
+        id: kernellogo
         x: 57
         y: 547
-        source: "assets/kernallogo.png"
+        source: "assets/kernellogo.png"
     }
 
     Image {
@@ -131,13 +131,13 @@ Item {
     }
 
     Text {
-        id: kernal_version
+        id: kernel_version
         x: 165
         y: 555
         width: 229
         height: 38
         color: "#000000"
-        text: "Kernal Version"
+        text: "Kernel Version"
         font.pixelSize: 32
         horizontalAlignment: Text.AlignLeft
         font.family: "Source Sans Pro"
