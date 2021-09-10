@@ -168,7 +168,10 @@ class Settting(QObject):
     #Shutdown
     @Slot()
     def Shutdown(self):
-        os.system('shutdown now')
+        if 'buildroot' in platform.uname(): 
+            os.system('poweroff now')
+        else:
+            os.system('shutdown now')
         logging.info("R2 System Shutdown")
 
     #Reboot
