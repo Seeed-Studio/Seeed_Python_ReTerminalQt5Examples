@@ -170,6 +170,8 @@ class Settting(QObject):
     def Shutdown(self):
         if 'buildroot' in platform.uname(): 
             os.system('poweroff now')
+        elif 'raspberrypi4-64' in platform.uname():
+            os.system('poweroff')
         else:
             os.system('shutdown now')
         logging.info("R2 System Shutdown")
