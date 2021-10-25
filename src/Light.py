@@ -13,10 +13,12 @@ else:
 from evdev import *
 
 lightpath = '/sys/bus/iio/devices/iio:device0/in_intensity_ir_raw'
+gainconfpath = '/sys/bus/iio/devices/iio:device0/in_intensity_scale'
 class LightSensor(QThread):
     LightSignal = Signal(int)
     def __init__(self):
         super().__init__()
+        os.system('echo 0.01 >'+ gainconfpath)
     def run(self): 
         if os.path.isfile(lightpath):
             try:
