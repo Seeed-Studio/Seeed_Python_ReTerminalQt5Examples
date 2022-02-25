@@ -12,7 +12,7 @@ because of default Debian and Ubuntu OS dont have `QtQuick.Studio` and `QtQuick.
 
 Install compile tools
 ```
-sudo apt install qt5-qmake qt5-default
+sudo apt install qt5-qmake qt5-default qtdeclarative5-private-dev qtbase5-private-gles-dev
 ```
 
 Because of the lastest `QtQuick.Studio` cannt work on current RPI system. but we had port it to  `Debian GNU/Linux 10 (buster)`. 
