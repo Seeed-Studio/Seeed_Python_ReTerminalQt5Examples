@@ -5,14 +5,14 @@ Python Examples for Seeed ReTerminal
 
 For debian or ubuntu system ,you need install following packages.
 ```shell
-sudo apt install  qml-module-qtquick-shapes python3-pyside2.qtqml python3-pyside2.qtcore python3-pyside2.qtnetwork python3-pyside2.qtgui python3-pyside2.qtwidgets python3-pyside2.qtquick qtquickcontrols2-5-dev qml-module-qtcharts qml-module-qtquick-controls  qml-module-qtquick-controls2
+sudo apt install at-spi2-core onboard qml-module-qtquick-shapes python3-pyside2.qtqml python3-pyside2.qtcore python3-pyside2.qtnetwork python3-pyside2.qtgui python3-pyside2.qtwidgets python3-pyside2.qtquick qtquickcontrols2-5-dev qml-module-qtcharts qml-module-qtquick-controls qml-module-qtquick-controls2 python3-evdev python3-psutil
 ```
 
 because of default Debian and Ubuntu OS dont have `QtQuick.Studio` and `QtQuick.Timeline` modules. we can install them menually.
 
 Install compile tools
 ```
-sudo apt install qt5-qmake qt5-default qtdeclarative5-private-dev qtbase5-private-gles-dev
+sudo apt install qtbase5-dev qtchooser qt5-qmake qtbase5-dev-tools qtdeclarative5-private-dev qtbase5-private-gles-dev
 ```
 
 Because of the lastest `QtQuick.Studio` cannt work on current RPI system. but we had port it to  `Debian GNU/Linux 10 (buster)`. 
