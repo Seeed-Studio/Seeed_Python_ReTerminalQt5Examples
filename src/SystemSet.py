@@ -81,7 +81,7 @@ class Settting(QObject):
     #VNC
     @Slot()
     def VNCon(self):
-        if 'raspberrypi4-64' in platform.uname(): 
+        if 'seeed-reterminal' in platform.uname(): 
             print("yocto not support vnc yet")
         elif 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
@@ -90,7 +90,7 @@ class Settting(QObject):
         logging.info("VNC ON")
     @Slot()
     def VNCoff(self):
-        if 'raspberrypi4-64' in platform.uname(): 
+        if 'seeed-reterminal' in platform.uname(): 
             print("yocto not support vnc yet")
         elif 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
@@ -99,7 +99,7 @@ class Settting(QObject):
         logging.info("VNC ON")
     @Slot(result=bool)
     def getVNC(self):
-        if 'raspberrypi4-64' in platform.uname(): 
+        if 'seeed-reterminal' in platform.uname(): 
             vnc="inactive"
             print("yocto not support vnc yet")
         elif 'buildroot' in platform.uname(): 
@@ -170,7 +170,7 @@ class Settting(QObject):
     def Shutdown(self):
         if 'buildroot' in platform.uname(): 
             os.system('poweroff now')
-        elif 'raspberrypi4-64' in platform.uname():
+        elif 'seeed-reterminal' in platform.uname():
             os.system('poweroff')
         else:
             os.system('shutdown now')
