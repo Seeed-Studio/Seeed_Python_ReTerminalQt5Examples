@@ -1,6 +1,7 @@
 import sys,logging
 import os
 import platform
+import re
 
 try:
         from PySide2.QtCore import *
@@ -11,8 +12,10 @@ if 'PyQt5' in sys.modules:
 else:
         from PySide2.QtCore import Signal, Slot
 
-
-Lcdlightpath = '/sys/class/backlight/1-0045/brightness'
+if re.compile(r"seeed-reterminal-plus.").search(str(platform.uname())):
+    Lcdlightpath = '/sys/class/backlight/lcd_backlight/brightness'
+else:
+    Lcdlightpath = '/sys/class/backlight/1-0045/brightness'
 SSHonPath = '/lib/systemd/system/ssh.service'
 SSHoffPath = '/etc/systemd/system/multi-user.target.wants/ssh.service'
 #VNConPath = '/usr/lib/systemd/system/vncserver-x11-serviced.service'
@@ -81,7 +84,7 @@ class Settting(QObject):
     #VNC
     @Slot()
     def VNCon(self):
-        if 'seeed-reterminal' in platform.uname(): 
+        if re.compile(r"seeed-reterminal.").search(str(platform.uname())):
             print("yocto not support vnc yet")
         elif 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
@@ -90,7 +93,7 @@ class Settting(QObject):
         logging.info("VNC ON")
     @Slot()
     def VNCoff(self):
-        if 'seeed-reterminal' in platform.uname(): 
+        if re.compile(r"seeed-reterminal.").search(str(platform.uname())):
             print("yocto not support vnc yet")
         elif 'buildroot' in platform.uname(): 
             print("buildroot not support vnc yet")
@@ -99,7 +102,7 @@ class Settting(QObject):
         logging.info("VNC ON")
     @Slot(result=bool)
     def getVNC(self):
-        if 'seeed-reterminal' in platform.uname(): 
+        if re.compile(r"seeed-reterminal.").search(str(platform.uname())):
             vnc="inactive"
             print("yocto not support vnc yet")
         elif 'buildroot' in platform.uname(): 
@@ -170,7 +173,7 @@ class Settting(QObject):
     def Shutdown(self):
         if 'buildroot' in platform.uname(): 
             os.system('poweroff now')
-        elif 'seeed-reterminal' in platform.uname():
+        elif re.compile(r"seeed-reterminal.").search(str(platform.uname())):
             os.system('poweroff')
         else:
             os.system('shutdown now')

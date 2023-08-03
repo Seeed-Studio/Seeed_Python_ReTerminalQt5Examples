@@ -2,6 +2,7 @@
 import os, logging
 import sys
 import platform
+import re
 
 try:
 	import PySide2.QtQml
@@ -64,7 +65,7 @@ if __name__ == '__main__':
     logging.basicConfig(filename=LOG_NAME,level=logging.DEBUG,format=LOG_FORMAT)
     # view = QQuickView()
     engine = QQmlApplicationEngine()
-    if 'seeed-reterminal' in platform.uname():
+    if re.compile(r"seeed-reterminal.").search(str(platform.uname())):
         engine.addImportPath("/usr/lib/qml")
         url = QUrl("../Fullscreen_app_for_buildroot.qml")
     elif 'buildroot' in platform.uname():
